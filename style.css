@@ -1,106 +1,73 @@
 /* Mobile first */
 
 .site-container {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-areas:
-        "header"
-        "main"
-        "main"
-        "main"
-        "main"
-        "main"
-        "main"
-        "main"
-        "widget"
-        "widget"
-        "widget"
-        "footer"
-    ;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 2fr 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-areas:
+		'header'
+		'main'
+		'widget'
+		'footer';
 }
 
 .site-header {
-    grid-area: header;
-    background-color: deepskyblue;
-
+	grid-area: header;
+	background-color: deepskyblue;
 }
 
 .site-main {
-    grid-area: main;
-    background-color: teal;
-
+	grid-area: main;
+	background-color: teal;
 }
 
 .widget-area {
-    grid-area: widget;
-    background-color: darkorchid;
-
+	grid-area: widget;
+	background-color: darkorchid;
 }
 
 .site-footer {
-    grid-area: footer;
-    background-color: royalblue;
-
+	grid-area: footer;
+	background-color: royalblue;
 }
 
 p {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.2em;
 }
 
 /* Media queries */
 /* Desktop */
 @media (min-width: 1024px) {
-    .site-container {
-        margin: 0 auto;
-        min-width: 1024px;
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: repeat(12, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        grid-template-areas:
-            "header main"
-            "header main"
-            "header main"
-            "header main"
-            "header main"
-            "header main"
-            "header main"
-            "header main"
-            "header widget"
-            "header widget"
-            "header widget"
-            "header footer"
-        ;
-    }
+	.site-container {
+		margin: 0 auto;
+		min-width: 1024px;
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: 8fr 3fr 1fr 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		grid-template-areas:
+			'header main'
+			'header widget'
+			'header footer';
+	}
 }
 
 /* Extra breed scherm */
 @media (min-width: 1600px) {
-    .site-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: repeat(12, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        grid-template-areas:
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header main  widget"
-            "header footer  widget"
-        ;
-    }
+	.site-container {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 12fr 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		grid-template-areas:
+			'header main  widget'
+			'header footer  widget';
+	}
 }
